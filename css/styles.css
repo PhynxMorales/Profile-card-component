@@ -65,6 +65,8 @@ main {
           align-items: center;
   position: relative;
   gap: 0px;
+  -webkit-box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.185);
+          box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.185);
 }
 
 .card__header {
@@ -118,6 +120,10 @@ main {
   margin: 46px 0 0 0;
 }
 
+.body__title p {
+  font-size: 14px;
+}
+
 .title-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -160,29 +166,32 @@ main {
 }
 
 .card__social {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  gap: 3.6rem;
 }
 
-.card__social .social__stats {
+.card__social .social__icon {
+  padding: 0 19px;
+}
+
+.card__social .social__icon .social__stats {
   font-size: 18px;
   font-weight: 700;
+  color: #2d3248;
 }
 
-.card__social .social__title {
+.card__social .social__icon .social__title {
   font-size: 10px;
   font-weight: 400;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   margin-top: 5px;
+  color: #6a6f81;
 }
 
 .bg-circle {
@@ -191,13 +200,13 @@ main {
 }
 
 .bg-circle:nth-child(2) {
-  top: -60%;
+  top: -55%;
   left: -20%;
 }
 
 .bg-circle:nth-child(3) {
-  bottom: -60%;
-  right: -20%;
+  bottom: -70%;
+  right: -16%;
 }
 
 @media screen and (max-width: 900px) {

@@ -41,6 +41,7 @@ main {
   align-items: center;
   position: relative;
   gap: 0px;
+  box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.185);
 }
 .card__header {
   width: 100%;
@@ -74,6 +75,9 @@ main {
   text-align: center;
   color: $Dark-grayish-blue;
   margin: 46px 0 0 0;
+  p {
+    font-size: 14px;
+  }
 }
 .title-content {
   display: flex;
@@ -101,20 +105,24 @@ main {
   border-top: 1px solid rgba(0, 0, 0, 0.103);
 }
 .card__social {
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   text-align: center;
-  gap: 3.6rem;
-  .social__stats {
-    font-size: 18px;
-    font-weight: 700;
-  }
-  .social__title {
-    font-size: 10px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    margin-top: 5px;
+  .social__icon {
+    padding: 0 19px;
+    .social__stats {
+      font-size: 18px;
+      font-weight: 700;
+      color: $Very-dark;
+    }
+    .social__title {
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      margin-top: 5px;
+      color: $Dark-grayish-blue;
+    }
   }
 }
 
@@ -124,12 +132,12 @@ main {
   z-index: -1;
 }
 .bg-circle:nth-child(2) {
-  top: -60%;
+  top: -55%;
   left: -20%;
 }
 .bg-circle:nth-child(3) {
-  bottom: -60%;
-  right: -20%;
+  bottom: -70%;
+  right: -16%;
 }
 
 // Media Screen Mobil
